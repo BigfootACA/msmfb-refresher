@@ -1,0 +1,14 @@
+[Unit]
+Description=Qualcomm Adreno GPU Framebuffer Refresher
+DefaultDependencies=no
+[Service]
+Type=forking
+ExecStart=/usr/bin/msmfb-refresher -D
+KillMode=mixed
+Restart=always
+IgnoreSIGPIPE=no
+StandardOutput=syslog
+StandardError=inherit
+ExecReload=/bin/kill -SIGINT $MAINPID
+[Install]
+WantedBy=sysinit.target
