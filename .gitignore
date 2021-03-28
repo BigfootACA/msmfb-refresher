@@ -1,0 +1,15 @@
+*.rej
+*.orig
+*.swp
+*.save*
+*.o
+*.a
+*.out
+*.lib
+*.obj
+*.dll
+*.so
+*.exe
+*.pkg.tar.*
+src/
+pkg/
